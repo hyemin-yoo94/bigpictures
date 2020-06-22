@@ -1,0 +1,375 @@
+/*  폰트 적용 */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css, //fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900.css);
+
+html {
+    font-family: "Noto Sans KR", "Roboto", sans-serif;
+}
+
+/* 노말라이즈 */
+body,
+ul,
+li,
+h1 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 라이브러리 */
+.overflow-hidden {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.con {
+    margin: 0 auto;
+}
+
+.img-box > img {
+    width: 100%;
+    display: block;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.cell-right {
+    float: right;
+    box-sizing: border-box;
+}
+
+.margin-0-auto {
+    margin: 0 auto;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.line-height-0-ch-only {
+    line-height: 0;
+}
+
+.line-height-0-ch-only > * {
+    line-height: normal;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute-left {
+    position: absolute;
+    left: 0;
+}
+
+.absolute-right {
+    position: absolute;
+    right: 0;
+}
+
+.absolute-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.width-100p {
+    width: 100%;
+}
+
+.table {
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.vertical-align-top {
+    vertical-align: top;
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.vertical-align-bottom {
+    vertical-align: bottom;
+}
+
+/* 커스텀 */
+
+.con {
+    width: 1920px;
+}
+
+.con-min-width {
+    min-width: 960px;
+}
+
+/* 반응형 레이아웃 */
+/*
+.con {
+    max-width:1150px;
+}
+
+.con-min-width {
+    min-width:320px;
+}
+
+html, body {
+    overflow-x:hidden;
+}
+*/
+
+
+
+/* 작업 여기서부터 시작 */
+
+/* 페이지 인디케이터 시작 */
+.pagination {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.pagination a {
+    display: block;
+    color: white;
+    position: relative;
+    padding: 20px;
+}
+
+.pagination a.active:after {
+    box-shadow: inset 0 0 0 5px;
+}
+
+.pagination a .hover-text {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+
+.pagination a:hover .hover-text {
+    opacity: 1;
+}
+
+.pagination a:after {
+    content: "";
+    transition: box-shadow 0.5s ease;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* 페이지 인디케이터 끝 */
+
+/* page 기초 설정 */
+.page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    user-select: none;
+}
+
+/* gideline : 중앙 가이드라인 */
+.gideline {
+    position: relative;
+    left: 50%;
+}
+
+.gideline::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100vh;
+    background-color: #BA2424;
+    z-index: -1;
+}
+
+/* comment */
+.comment {
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* page-1 : 메인 이미지 슬라이드 */
+.img-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    /* font-size : 반응형으로 변경 */
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 67px;
+    letter-spacing: -5px;
+
+}
+
+/* page-2 : comment-1 */
+.comment-1 {
+    background-color: #fff;
+}
+
+/* page-2 : contents - 컨텐츠 박스 */
+.page-2 > .contents {
+    position: relative;
+    width: 900px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.page-2 > .contents:hover > * {
+    background-color: #BA2424;
+    transform: scale(1.2);
+}
+
+.page-2 > .contents > * {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transform: rotate(45deg);
+    background-color: #333;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: -2.5px;
+    color: #fff;
+    box-shadow: 20px 10px 30px #C4C4C4;
+    transition: transform 0.5s ease;
+}
+
+.page-2 > .contents > .contents_01 {
+    left: -125px;
+}
+
+.page-2 > .contents > .contents_02 {
+    left: 300px;
+}
+
+.page-2 > .contents > .contents_03 {
+    right: -125px;
+}
+
+.contents-txt {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+}
+
+/* page-2 : bg */
+.bg {
+    position: absolute;
+    font-family: roboto;
+    font-size: 150px;
+    font-weight: 800;
+    letter-spacing: -9px;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-1 {
+    top: 0;
+    right: 0;
+}
+
+.bg-2 {
+    bottom: 0;
+    left: 0;
+}
+
+/* page-3 : comment-2 */
+.comment-2 {
+    color: #FFF;
+}
+
+.comment-2 > .txt-line {
+    width: 100%;
+    height: 1px;
+    background-color: #FFF;
+    margin: 10px;
+}
+
+/* page-3 : middle-line */
+.middle-line {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.icon-1 {
+    left: 35%;
+}
+
+.icon-3 {
+    left: 65%;
+}
