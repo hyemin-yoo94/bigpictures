@@ -122,11 +122,11 @@ a {
 /* 커스텀 */
 
 .con {
-    width: 1920px;
+    width: 1180px;
 }
 
 .con-min-width {
-    min-width: 960px;
+    min-width: 1180px;
 }
 
 /* 반응형 레이아웃 */
@@ -355,15 +355,16 @@ html, body {
 
 .icon {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 100px;
     margin-top: auto;
     margin-bottom: auto;
+    transition: background-color .5s;
 }
 
 .icon-1 {
@@ -372,4 +373,428 @@ html, body {
 
 .icon-3 {
     left: 65%;
+}
+
+i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.comment-3 {
+    color: #000;
+    font-size: 16px;
+    top: 80%;
+    left: 35%;
+}
+
+.comment-4 {
+    color: #000;
+    font-size: 16px;
+    top: 80%;
+}
+
+.comment-5 {
+    color: #000;
+    font-size: 16px;
+    top: 80%;
+    left: 65%;
+}
+
+.icon-box .icon:hover {
+    background-color: #BA2424;
+}
+
+/* page-4 : circle-box */
+/* 추후 수정*/
+.page-4 .cell {
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+.circle-txt {
+    height: 50%;
+    width: 50%;
+}
+
+/* page-4 : circle 타이틀 디자인 */
+.circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: #333;
+    box-shadow: 20px 10px 30px #C4C4C4;
+}
+
+.circle-inline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 160px;
+    height: 160px;
+    border: solid rgba(255, 255, 255, 0.5) 1px;
+    border-radius: 100px;
+}
+
+.circle-inline > p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+/* page-4 : circle 우측 멘트 */
+.circle-txt {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+
+/* page-5 : CMS-txt */
+.CMS-txt {
+    background-color: #FFF;
+    height: 250px;
+}
+
+.CMS-txt h1 {
+    font-family: "Roboto";
+    font-size: 90px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    line-height: 0.8;
+    color: #333;
+}
+
+.CMS-txt span {
+    color: #BA2424;
+}
+
+.CMS-txt h1:first-child {
+    margin-top: 4%;
+    margin-left: 20%;
+}
+
+.CMS-txt h1:nth-child(2) {
+    margin-left: 30%;
+}
+
+.CMS-txt h1:nth-child(3) {
+    margin-left: 40%;
+}
+
+/* page-5 : CMS-simulator */
+.CMS-simulator {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    background-color: #333;
+}
+
+/* 추후 수정*/
+.CMS-simulator > .CMS-simulator-inline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 95%;
+    height: 85%;
+    border: solid rgba(255, 255, 255, 0.5) 1px;
+}
+
+/* page-5 : hardwear */
+.hardwear-img-box {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 30%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.hardwear_img {
+    width: 300px;
+}
+
+.CMS-simulator p {
+    color: #FFF;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+/* page-5 : softwear */
+.softwear-img-box .start-line {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translateX(-50%)translateY(-50%);
+    text-align: right;
+}
+
+.softwear-img-box .finish-line {
+    display: flex;
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    transform: translateX(-50%)translateY(-50%);
+    text-align: right;
+}
+
+.softwear-img-box p {
+    transform: rotate(90deg);
+    width: 150px;
+    height: 120px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.towercrane {
+    width: 200px;
+}
+
+.forklift {
+    width: 200px;
+}
+
+.loader {
+    width: 200px;
+}
+
+.excavators {
+    width: 200px;
+}
+
+
+/* page-6 : VRsoftwear-txt */
+.VRsoftwear-txt {
+    background-color: #FFF;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.VRsoftwear-txt h1 {
+    font-family: "Roboto";
+    font-size: 90px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    color: #333;
+}
+
+.VRsoftwear-txt p {
+    background-color: #FFF;
+    top: 19%;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* page-6 : VRsoftwear-img */
+.VRsoftwear-img-01 {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    box-shadow: 10px 10px 10px #C4C4C4;
+}
+
+.VRsoftwear-img-02 {
+    position: absolute;
+    top: 60%;
+    right: 0;
+    box-shadow: 10px 10px 10px #C4C4C4;
+}
+
+.page-6 .gideline::before {
+    height: 20vh;
+}
+
+
+/* page-7 : footer-gideline */
+.footer-gideline {
+    position: relative;
+    left: 0;
+    top: 20vh;
+}
+
+.footer-gideline::before {
+    content: "";
+    position: absolute;
+    width: 200vh;
+    height: 1px;
+    background-color: #BA2424;
+    z-index: -1;
+}
+
+/* page-7 : contact-txt */
+.contact-txt {
+    position: absolute;
+    font-family: roboto;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    top: 16.5vh;
+    background-color: #FFF;
+    left: 35%;
+    padding: 0 50px;
+}
+
+/* page-7 : contact-txt-box p */
+.contact-txt-box p {
+    position: absolute;
+    top: 30vh;
+    left: 5%;
+}
+
+.contact-txt-box p:nth-child(3) {
+    top: 33vh;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.contact-txt-box p:nth-child(3) > strong {
+    font-family: 'Roboto';
+    letter-spacing: -0.5px;
+}
+
+.contact-txt-box p:nth-child(4) {
+    top: 40vh;
+    font-family: 'Roboto';
+    letter-spacing: -0.5px;
+    font-weight: 300;
+}
+
+.contact-txt-box p:nth-child(5) {
+    top: 43vh;
+    font-family: 'Roboto';
+    letter-spacing: -0.5px;
+    font-weight: 300;
+}
+
+.contact-txt-box p:nth-child(6) {
+    top: 46vh;
+    font-family: 'Roboto';
+    letter-spacing: -0.5px;
+    font-weight: 300;
+}
+
+.contact-txt-box p:nth-child(7) {
+    top: 53vh;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.contact-txt-box p:nth-child(8) {
+    top: 56vh;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+/* page-7 : footer-box */
+.footer-box {
+    position: relative;
+    top: 15vh;
+    left: 105vh;
+    width: 100vh;
+    height: 65vh;
+    background: linear-gradient(145.73deg, #333333 0%, #656D87 63.18%);
+    border-radius: 35px;
+}
+
+
+/* page-7 : footer-box-client */
+.client-txt p {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #FFF;
+    top: 15%;
+    left: 5%;
+}
+
+.client-txt p:nth-child(2) {
+    top: -5%;
+    left: 10.5%;
+    font-family: roboto;
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.client-logo {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+.client-logo img {
+    width: 100px;
+    margin-right: 13px;
+}
+
+.client-logo img:last-child {
+    width: 50px;
+    margin-top: 30px;
+    margin-right: 15px;
+}
+
+/* page-7 : footer-box-partner */
+.partner-txt p {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #FFF;
+    top: 63%;
+    left: 5%;
+}
+
+.partner-txt p:nth-child(2) {
+    top: 43.5%;
+    bottom: 100%;
+    left: 8.5%;
+    font-family: roboto;
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.partner-logo {
+    position: absolute;
+    top: 78%;
+    left: 5%;
+}
+
+.partner-logo img {
+    width: 100px;
+    margin-right: 35px;
+}
+
+/* page-7 : bg-bigpictures */
+.page-7 .bigpictures {
+    position: absolute;
+    font-family: roboto;
+    font-size: 150px;
+    font-weight: 800;
+    letter-spacing: -9px;
+    color: #333;
+    bottom: 0;
+    right: 1vh;
 }
