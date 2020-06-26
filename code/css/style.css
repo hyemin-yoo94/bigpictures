@@ -553,6 +553,64 @@ i {
     background-color: #333;
 }
 
+.CMS-simulator > .CMS-simulator-inline {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 80%;
+    background-color: #FFF;
+}
+
+/* page-5 : hardwear-img */
+.CMS-simulator > .CMS-simulator-inline > .hardwear > img {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 400px;
+}
+
+/* page-5 : hardwear-button */
+.side-button {
+    position: absolute;
+    top: 15.5%;
+    left: 27%;
+    width: 1px;
+    height: 155px;
+    transform: rotate(45deg);
+    background-color: #BA2424;
+}
+
+.CMS-simulator > .CMS-simulator-inline > .hardwear > .button {
+    position: absolute;
+    top: 16.5%;
+    left: 28%;
+    width: 200px;
+    height: 55px;
+    background-color: #BA2424;
+    border: #BA2424 solid 1px;
+    box-sizing: border-box;
+}
+
+.CMS-simulator > .CMS-simulator-inline > .hardwear > .button > p {
+    font-weight: 300;
+    font-family: 'Noto Sans KR';
+    margin-left: 20px;
+    color: #FFF;
+}
+
+/* page-5 : softwear-img */
+.CMS-simulator > .CMS-simulator-inline > .softwear {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.CMS-simulator > .CMS-simulator-inline > .softwear > img {
+    height: 150px;
+}
+
 /* page-6 : VRsoftwear-txt */
 .VRsoftwear-txt {
     background-color: #FFF;
