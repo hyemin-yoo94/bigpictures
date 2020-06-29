@@ -28,3 +28,45 @@ $(function() {
         }
     });
 });
+
+
+$('.slider-1 > .page-nav > div').click(function() {
+    var $this = $(this);
+    var $slider = $this.closest('.slider-1');
+    
+    $this.addClass('active');
+    $this.siblings('.active').removeClass('active');
+    
+    var index = $this.index();
+    
+    $slider.find(' > .slides > .active').removeClass('active');
+    $slider.find(' > .slides > div').eq(index).addClass('active');
+});
+
+$('.slider-1 > .side-btns > div:first-child').click(function() {
+    var $this = $(this);
+    var $slider = $this.closest('.slider-1');
+    
+    var $current = $slider.find('.page-nav > div.active');
+    var $post = $current.prev();
+    
+    if ( $post.length == 0 ) {
+        $post = $slider.find('.page-nav > div:last-child');
+    }
+    
+    $post.click();
+});
+
+$('.slider-1 > .side-btns > div:last-child').click(function() {
+    var $this = $(this);
+    var $slider = $this.closest('.slider-1');
+    
+    var $current = $slider.find('.page-nav > div.active');
+    var $post = $current.next();
+    
+    if ( $post.length == 0 ) {
+        $post = $slider.find('.page-nav > div:first-child');
+    }
+    
+    $post.click();
+});

@@ -9,6 +9,7 @@
     <!-- "all.min.css" 추후 용량 낮은걸로 변경할 것 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body>
@@ -18,13 +19,26 @@
 
 
     <!-- page-1 : 메인 이미지 슬라이드 -->
-    <div class="page page-1 main-slide overflow-hidden" data-section-name="page-1">
-        <div class="img-box">
-            <img class="main_img_01" src="./img/main_img_01.jpg" alt="">
-            <div class="img-cover">
-                <div class="text-box text-align-center">
-                    <h1>건설기계 실습교육의 안전한 환경을 만들어가다.</h1>
-                </div>
+    <div class="page page-1 main-slide slider-1 overflow-hidden" data-section-name="page-1">
+        <div class="slides-cover"></div>
+        <div class="slides">
+            <div class="active" style="background-image:url(https://miro.medium.com/max/4320/1*lL7lfrjEWAGGtGcTMXvraA.jpeg?auto=compress,format);"><div class="txt-box"><h1>건설기계 실습교육의 안전한 환경을 만들어가다.</h1></div></div>
+            <div style="background-image:url(https://miro.medium.com/max/1920/1*wSVG41lPYKvkIjGyutynHg.jpeg?auto=compress,format);"><div class="txt-box"><h1>가상공간과 현실의 경계를 허물어 갑니다.</h1></div></div>
+            <div style="background-image:url(https://miro.medium.com/max/1920/1*Bzf775zcidXXXJrEFouPOQ.jpeg?auto=compress,format);"><div class="txt-box"><h1>더 나은, 더 좋은 제품을 위해 끊임없이 노력합니다.</h1></div></div>
+        </div>
+
+        <div class="page-nav">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="side-btns">
+            <div>
+                <span><i class="fas fa-arrow-left"></i></span>
+            </div>
+            <div>
+                <span><i class="fas fa-arrow-right"></i></span>
             </div>
         </div>
     </div>
@@ -127,25 +141,30 @@
 
     <!-- page-5 -->
     <div class="page page-5 overflow-hidden" data-section-name="page-5">
+        <div class="CMS-bg"></div>
         <div class="CMS-txt">
             <h1><span>C</span>onstruction</h1>
             <h1><span>M</span>achines</h1>
             <h1><span>S</span>imulator</h1>
         </div>
-        <div class="CMS-simulator con">
+        <div class="CMS-simulator">
             <div class="CMS-simulator-inline">
                 <div class="hardwear">
-                    <img src="./img/hardwear.png" alt="">
-                    <div class="side-button"></div>
-                    <div class="button">
-                        <p>VR 시뮬레이터 하드웨어</p>
+                    <div class="hardwear-img-box">
+                        <div class="hardwear-bg">
+                            <p>VR 시뮬레이터 하드웨어</p>
+                        </div>
+                        <img src="./img/hardwear.png" alt="">
                     </div>
                 </div>
                 <div class="softwear">
-                    <img src="./img/tower_crane.png" alt="">
-                    <img src="./img/loader.png" alt="">
-                    <img src="./img/fork_lift.png" alt="">
-                    <img src="./img/excavators.png" alt="">
+                    <div class="softwear-bg">
+                        <p>VR 시뮬레이터 소프트웨어</p>
+                    </div>
+                    <img class="softwear-01" src="./img/tower_crane.png" alt="">
+                    <img class="softwear-02" src="./img/loader.png" alt="">
+                    <img class="softwear-03" src="./img/fork_lift.png" alt="">
+                    <img class="softwear-04" src="./img/excavators.png" alt="">
                 </div>
             </div>
         </div>
@@ -217,8 +236,9 @@
     <!-- 로딩 아이콘 <i class="fa fa-spinner fa-pulse fa-fw"></i> -->
 
     <!-- 자바스크립트, 스크롤 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
+
     <script src="js/index.js"></script>
 </body></html>

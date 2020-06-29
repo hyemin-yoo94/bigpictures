@@ -234,7 +234,135 @@ html, body {
     transform: translateX(-50%);
 }
 
-/* page-1 : 메인 이미지 슬라이드 */
+/* 슬라이더 시작 */
+.slider-1 {
+    height:100vh;
+    position:relative;
+}
+
+.slider-1 .slides > div {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-position:center;
+    /* 이미지를 최대한 안짤리게 한다. */
+    background-size:cover;
+    /* 배경 반복 금지 */
+    background-repeat:no-repeat;
+    opacity:0;
+    transition: opacity 0.5s;
+}
+
+.slider-1 .slides > div.active {
+    opacity:1;
+}
+
+@media ( max-width:700px ) {
+    .slider-1 {
+        height:300px;
+    }
+}
+
+.slides-cover {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.txt-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 67px;
+    letter-spacing: -5px;
+    z-index: 2;
+}
+
+/* 슬라이더 끝 */
+
+
+/* 슬라이더 하단 페이지 버튼 시작 */
+.slider-1 .page-nav {
+    position:absolute;
+    width:100%;
+    text-align:center;
+    bottom:0;
+    left:0;
+    z-index: 2;
+}
+
+.slider-1 .page-nav > div {
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background-color:rgba(255,255,255,0.5);
+    border-radius:100px;
+    cursor:pointer;
+    margin: 0 5px;
+}
+
+.slider-1 .page-nav > div.active {
+    background-color:rgba(255,255,255,1);
+}
+/* 슬라이더 하단 페이지 버튼 끝 */
+
+
+/* 슬라이더 사이드 버튼 시작 */
+.slider-1 > .side-btns > div {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:calc( 50% - 100px );
+    cursor:pointer;
+    z-index: 2;
+}
+
+
+.slider-1 > .side-btns > div:last-child {
+    left:auto;
+    right:0;
+}
+
+.slider-1 > .side-btns > div > span {
+    position:absolute;
+    top:50%;
+    left:inherit;
+    right:inherit;
+    margin:0 10px;
+    font-size:2rem;
+    background-color:rgba(0,0,0,0.6);
+    width:70px;
+    height:50px;
+    border-radius: 100px;
+    transform:translateY(-50%);
+    transition:transform 0.2s;
+}
+
+.slider-1 > .side-btns > div > span > i {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+    color:rgba(255,255,255,0.6);
+}
+
+.slider-1 > .side-btns > div:active > span {
+    transform:translateY(-40%);
+}
+/* 슬라이더 사이드 버튼 끝 */
+
+/* page-1 : 메인 이미지 슬라이드
 .img-cover {
     position: absolute;
     top: 0;
@@ -250,13 +378,11 @@ html, body {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: #fff;
-    /* font-size : 반응형으로 변경 */
     font-size: 32px;
     font-weight: 700;
     line-height: 67px;
     letter-spacing: -5px;
-
-}
+} */
 
 /* page-2 : comment-1 */
 .comment-1 {
@@ -442,6 +568,7 @@ i {
     margin-top: -9%;
 }
 
+/* hover 효과
 .circle-box:hover {
     align-items: stretch;
 }
@@ -460,16 +587,20 @@ i {
     border: rgba(255, 255, 255, 0) solid 1px;
 }
 
+.circle-box:hover > .circle-txt {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+*/
+
+
 .circle-txt {
     height: 50%;
     margin-left: 5%;
     transition: all 0.5s ease;
 }
 
-.circle-box:hover > .circle-txt {
-    margin-left: 10%;
-    margin-top: 2%;
-}
 
 /* page-4 : circle 타이틀 디자인 */
 .circle {
@@ -512,20 +643,25 @@ i {
     letter-spacing: -1px;
 }
 
-
-/* page-5 : CMS-txt */
-.CMS-txt {
-    background-color: #FFF;
-    height: 250px;
+/* page-5 : CMS-bg */
+.CMS-bg {
+    position: absolute;
+    background-color: #333;
+    width: 50vw;
+    height: 100vh;
+    top: 0%;
+    z-index: -1;
+    transform: rotate(45deg);
 }
 
+/* page-5 : CMS-txt */
 .CMS-txt h1 {
     font-family: "Roboto";
     font-size: 90px;
     font-weight: 800;
     letter-spacing: -5px;
     line-height: 0.8;
-    color: #333;
+    color: #FFF;
 }
 
 .CMS-txt span {
@@ -533,16 +669,16 @@ i {
 }
 
 .CMS-txt h1:first-child {
-    margin-top: 4%;
-    margin-left: 20%;
+    margin-top: 19%;
+    margin-left: 10.1%;
 }
 
 .CMS-txt h1:nth-child(2) {
-    margin-left: 30%;
+    margin-left: 18%;
 }
 
 .CMS-txt h1:nth-child(3) {
-    margin-left: 40%;
+    margin-left: 26%;
 }
 
 /* page-5 : CMS-simulator */
@@ -550,70 +686,76 @@ i {
     position: relative;
     width: 100%;
     height: 60%;
-    background-color: #333;
 }
 
 .CMS-simulator > .CMS-simulator-inline {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     width: 100%;
     height: 80%;
-    background-color: #FFF;
 }
 
 /* page-5 : hardwear-img */
-.CMS-simulator > .CMS-simulator-inline > .hardwear > img {
+.CMS-simulator > .CMS-simulator-inline > .hardwear > .hardwear-img-box > img {
     position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
+    top: 0;
+    left: 73%;
+    transform: translateX(-50%) translateY(-50%);
     width: 400px;
 }
 
-/* page-5 : hardwear-button */
-.side-button {
+.hardwear-bg {
     position: absolute;
-    top: 15.5%;
-    left: 27%;
-    width: 1px;
-    height: 155px;
-    transform: rotate(45deg);
-    background-color: #BA2424;
+    top: -50%;
+    left: 62%;
+    width: 420px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
-.CMS-simulator > .CMS-simulator-inline > .hardwear > .button {
-    position: absolute;
-    top: 16.5%;
-    left: 28%;
-    width: 200px;
-    height: 55px;
-    background-color: #BA2424;
-    border: #BA2424 solid 1px;
-    box-sizing: border-box;
-}
-
-.CMS-simulator > .CMS-simulator-inline > .hardwear > .button > p {
-    font-weight: 300;
-    font-family: 'Noto Sans KR';
-    margin-left: 20px;
+.hardwear-bg > p {
     color: #FFF;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.hardwear-bg {
+    display: none;
+}
+
+.hardwear:hover .hardwear-bg {
+    display: flex;
 }
 
 /* page-5 : softwear-img */
 .CMS-simulator > .CMS-simulator-inline > .softwear {
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: -95%;
+    right: 3.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    padding: 20px;
+    box-shadow: 10px 10px 10px 10px #C4C4C4;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .CMS-simulator > .CMS-simulator-inline > .softwear > img {
-    height: 150px;
+    width: 150px;
 }
 
 /* page-6 : VRsoftwear-txt */
 .VRsoftwear-txt {
-    background-color: #FFF;
     text-align: center;
     margin-top: 4%;
 }
@@ -627,11 +769,39 @@ i {
 }
 
 .VRsoftwear-txt p {
-    background-color: #FFF;
     top: 19%;
     line-height: 1.5;
     font-size: 15px;
     letter-spacing: -0.6px;
+}
+
+.softwear-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.softwear-bg > p {
+    color: #FFF;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.softwear-bg {
+    display: none;
+}
+
+.softwear:hover .softwear-bg {
+    display: flex;
 }
 
 /* page-6 : VRsoftwear-img */
@@ -663,7 +833,6 @@ i {
 .page-6 .gideline::before {
     height: 20vh;
 }
-
 
 /* page-7 : footer-gideline */
 .footer-gideline {
@@ -778,7 +947,7 @@ i {
     font-size: 80px;
     font-weight: 800;
     letter-spacing: -2px;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.1);
 }
 
 .client-logo {
@@ -817,7 +986,7 @@ i {
     font-size: 80px;
     font-weight: 800;
     letter-spacing: -2px;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.1);
 }
 
 .partner-logo {
